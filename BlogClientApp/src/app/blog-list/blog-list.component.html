@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Blog Posts</h2>
+    <ul class="list-group">
+      <li *ngFor="let post of blogPosts" class="list-group-item">
+        <a [routerLink]="['/blogdetail',post.id]">{{ post.text }}</a>
+      </li>
+    </ul>
+    <button [routerLink]="['/blogedit',0]" class="btn btn-primary mt-3">Add New Blog</button>
+  </div>
+  
